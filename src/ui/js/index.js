@@ -22,7 +22,6 @@ var app = function() {
         var gracelist = document.getElementById("grace-list");
         var datestring = grace.format("dddd, MMMM Do YYYY");
         entry.innerHTML = datestring;
-        entry.classList.add("w3-hover-grey");
         entry.classList.add("w3-padding-16");
         gracelist.appendChild(entry);
     }
