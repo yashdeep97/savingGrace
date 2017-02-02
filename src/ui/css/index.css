@@ -1,0 +1,143 @@
+body {
+  background: #ddd;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: 94%;
+  max-width: 1100px;
+  font-family: helvetica, sans-serif;
+}
+.content {
+  position: relative;
+  padding-top: 80px;
+}
+.content p {
+  margin-bottom: 10px;
+}
+#header {
+  z-index: 2;
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  background: #222;
+  color: white;
+}
+#header h1 {
+  top: 0px;
+  margin: 0px;
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+#nav {
+  position: absolute;
+  right: 0;
+  top: -15px;
+  height: 60px;
+}
+#nav ul li {
+  float: left;
+  list-style: none;
+}
+#nav ul li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 0 10px;
+}
+
+/*#grace-list {
+  background: #eee;
+  width: 100%;
+  margin: 0px;
+}*/
+/*#grace-list li {
+  float: none;
+  list-style: none;
+  padding: 10px 3%;
+  line-height: 20px;
+  border-top: 1px solid #333;
+}*/
+
+.container{
+  margin: auto;
+  width: 80%;
+}
+
+.c-btn {
+  font-size: 14px;
+  text-transform: capitalize;
+  font-weight: 600;
+  display: inline-block;
+  line-height: 36px;
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  min-width: 88px;
+  height: 36px;
+  margin: 10px 8px;
+  padding: 0 8px;
+  text-align: center;
+  letter-spacing: .5px;
+  border-radius: 2px;
+  background: #F1F1F1;
+  color: #393939;
+  transition: background 200ms ease-in-out;
+  box-shadow: 0 3.08696px 5.82609px 0 rgba(0, 0, 0, 0.16174), 0 3.65217px 12.91304px 0 rgba(0, 0, 0, 0.12435);
+}
+#markgrace{
+  width: 100%;
+}
+
+.c-btn:hover {
+  background: rgba(153, 153, 153, 0.2);
+  color: #393939;
+}
+
+.c-btn:active {
+  box-shadow: 0 9.6087px 10.78261px 0 rgba(0, 0, 0, 0.17217), 0 13.56522px 30.3913px 0 rgba(0, 0, 0, 0.15043);
+}
+
+@media (max-width: 599px) {
+  #header .container {
+    width: 100%;
+  }
+  #header h1 {
+    padding-left: 3%;
+  }
+  #nav {
+    width: 100%;
+    top: 60px;
+    display: none;
+  }
+  #nav:before {
+    content: '\2630';
+    display: block;
+    position: absolute;
+    right: 3%;
+    top: -50px;
+    line-height: 40px;
+    font-size: 1.4em;
+    cursor: pointer;
+  }
+  #nav ul {
+    background: #222;
+    width: 100%;
+    margin: 0px;
+  }
+  #nav ul li {
+    float: none;
+  }
+  #nav ul li a {
+    padding: 10px 3%;
+    line-height: 20px;
+    border-top: 1px solid #333;
+  }
+}
