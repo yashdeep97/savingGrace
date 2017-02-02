@@ -10,13 +10,37 @@ var app = function() {
         picker.trigger = document.getElementById('markgrace');
         $('#markgrace').off().on('onOk', function() {
             console.log(picker.time);
-            gracearray.push(picker.time);
-            gracearray = sortMomentArray(gracearray);
-            gracearray = getUniqueArray(gracearray);
-            renderGraceArray();
+            processGrace(picker.time);
         });
         picker.toggle();
     }
+
+    var processGrace = function(date) {
+        network.postGrace(date, function(err, response) {
+            if (err) {
+                alert("Network Error.");
+                return;
+            }
+            if (response == true) {
+                alert("Success");
+                network.getUpcomingGraces(function(err, graces) {
+                    if (err) {
+                        alert("Network Error.");
+                        return;
+                    }
+                    gracearray = graces;
+                    // gracearray = sortMomentArray(gracearray);
+                    // gracearray = getUniqueArray(gracearray);
+                    renderGraceArray();
+                });
+                return;
+            } else {
+                alert("Rules Error.");
+                return;
+            }
+        });
+    }
+
     var renderGrace = function(grace) {
         var entry = document.createElement("li");
         var gracelist = document.getElementById("grace-list");
